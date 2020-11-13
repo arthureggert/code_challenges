@@ -8,6 +8,6 @@ describe('sum square difference', () => {
 
   it('the difference between the sum of the squares and the square of the sum should be 25164150', () => {
     const result = solve(100)
-    expect(result).toBe(2640)
+    expect(result).toBe(25164150)
   })
 })

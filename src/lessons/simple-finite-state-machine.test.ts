@@ -54,10 +54,10 @@ describe('Simple Finite State Machine', () => {
   it('should throw error when transition to with invalid action', () => {
     try {
       // @ts-expect-error check if the transition method name is valid
-      machine.transition(machine.state, 'switchz')
+      machine.transition(machine.state, 'transition')
       expect(machine.state).toBe('on')
     } catch (e) {
-      expect(e.message).toBe('switchz is not a valid state transaction')
+      expect(e.message).toBe('transition is not a valid state transaction')
     }
   })
 })
