@@ -10,11 +10,11 @@
  *
  */
 
-import { primeFactors } from '../utils/prime';
+import { primeFactors } from '../utils/prime'
 
 function solve(numberToCheckPrimeFactors: number): number {
-  const primes = primeFactors(numberToCheckPrimeFactors);
-  return Math.max(...primes);
+  const primes = primeFactors(numberToCheckPrimeFactors)
+  return Math.max(...primes)
 }
 
-export { solve };
+export { solve }

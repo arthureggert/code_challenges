@@ -10,26 +10,26 @@
  * Find the largest palindrome made from the product of two 3-digit numbers.
  */
 
-import { isPalindrome } from '../utils/palindrome';
-import { getMinMaxNumber } from '../utils/math';
+import { getMinMaxNumber } from '../utils/math'
+import { isPalindrome } from '../utils/palindrome'
 
 function solve(numberOfDigits: number): number {
-  const { min: MINIMUM, max: MAXIMUM } = getMinMaxNumber(numberOfDigits);
-  let maximum = -1;
+  const { min: MINIMUM, max: MAXIMUM } = getMinMaxNumber(numberOfDigits)
+  let maximum = -1
 
   for (let first = MAXIMUM; first >= MINIMUM; first -= 1) {
     if (maximum >= first * 999) {
-      break;
+      break
     }
     // We do second >= first because we do not need to do the same count again since first * second = second * first
     for (let second = MAXIMUM; second >= first; second -= 1) {
-      const product = first * second;
+      const product = first * second
       if (maximum < product && isPalindrome(product)) {
-        maximum = product;
+        maximum = product
       }
     }
   }
-  return maximum;
+  return maximum
 }
 
-export { solve };
+export { solve }

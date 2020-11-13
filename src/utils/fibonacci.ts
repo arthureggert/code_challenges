@@ -1,15 +1,15 @@
 function fibonacci(max: number): number[] {
-  const fibonacciArray = [];
-  let first = 1;
-  let second = 0;
-  let temp = null;
+  const fibonacciArray = []
+  let first = 1
+  let second = 0
+  let temp = null
   while (first < max) {
-    temp = first;
-    first = second + first;
-    second = temp;
-    fibonacciArray.push(first);
+    temp = first
+    first = second + first
+    second = temp
+    fibonacciArray.push(first)
   }
-  return fibonacciArray;
+  return fibonacciArray
 }
 
-export { fibonacci };
+export { fibonacci }

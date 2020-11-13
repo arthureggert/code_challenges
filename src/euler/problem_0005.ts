@@ -9,22 +9,22 @@
  */
 
 function solve(maximumDivisor: number): number {
-  let result = maximumDivisor;
-  let count = 0;
+  let result = maximumDivisor
+  let count = 0
 
   for (let x = 1; x <= maximumDivisor; x += 1) {
     while (count < maximumDivisor) {
       for (let j = 1; j <= maximumDivisor; j += 1) {
         if (result % j === 0) {
-          count += 1;
+          count += 1
         } else {
-          count = 0;
-          result += maximumDivisor;
+          count = 0
+          result += maximumDivisor
         }
       }
     }
   }
-  return result;
+  return result
 }
 
-export { solve };
+export { solve }

@@ -1,12 +1,14 @@
+import { log, warn } from 'loglevel'
+
 function hello() {
-  console.log('HALLLLOOO');
+  log('hey')
 }
 
-hello();
+hello()
 
 function hello2() {
-  console.warn('another errorssss');
+  warn('another error')
 }
-hello2();
+hello2()
 
-export {};
+export {}

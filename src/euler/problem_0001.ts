@@ -66,15 +66,15 @@
  */
 
 function solve(maximum: number, firstDivisor: number, secondDivisor: number): number {
-  const floor = (divisor: number) => Math.floor((maximum - 1) / divisor);
-  const sum = (divisor: number) => (divisor * floor(divisor) * (floor(divisor) + 1)) / 2;
+  const floor = (divisor: number) => Math.floor((maximum - 1) / divisor)
+  const sum = (divisor: number) => (divisor * floor(divisor) * (floor(divisor) + 1)) / 2
 
-  const sumOfFirstDivisor = sum(firstDivisor);
-  const sumOfSecondDivisor = sum(secondDivisor);
+  const sumOfFirstDivisor = sum(firstDivisor)
+  const sumOfSecondDivisor = sum(secondDivisor)
   // lcm = least common multiple
-  const sumOfLCM = sum(firstDivisor * secondDivisor);
+  const sumOfLCM = sum(firstDivisor * secondDivisor)
 
-  return sumOfFirstDivisor + sumOfSecondDivisor - sumOfLCM;
+  return sumOfFirstDivisor + sumOfSecondDivisor - sumOfLCM
 }
 
-export { solve };
+export { solve }
